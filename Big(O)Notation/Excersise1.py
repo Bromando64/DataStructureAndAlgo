@@ -1,3 +1,5 @@
+# see the cheet sheets if you forgot
+
 # log all pairs of array
 
 boxes = [1, 2, 3, 4, 5]
