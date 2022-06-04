@@ -1,7 +1,3 @@
-from array import array
-from tkinter.tix import Tree
-
-
 # Given 2 arrays, create a function that let's a user know(true/false) whether these two arrays contain any common items
 
 # array1 = ["a", "b", "c", "x"]
