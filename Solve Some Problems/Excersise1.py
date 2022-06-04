@@ -14,12 +14,11 @@ from tkinter.tix import Tree
 
 
 # def findingCommon(array1, array2):  # first approach brute force
-#     a = False
 #     for item1 in array1:
 #         for item2 in array2:
 #             if item1 == item2:
-#                 a = True
-#     return a
+#                 return True
+#     return False
 
 
 # print(findingCommon(array1, array2))
