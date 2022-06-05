@@ -25,9 +25,17 @@ class MyArray:
     def replace(self, data,  index):
         self.data[index] = data
 
+    def insert(self, data, index):
+        self.shiftItemsRight(index)
+        self.replace(data, index)
+
     def shiftItemsLeft(self, index):
         for i in range(index, self.length - 1):
             self.data[i] = self.data[i+1]
+
+    def shiftItemsRight(self, index):
+        for i in range(self.length, index, -1):
+            self.data[i] = self.data[i - 1]
 
 
 newArray = MyArray()
@@ -39,4 +47,5 @@ newArray.push("hell")
 newArray.push("ball")
 newArray.push("doll")
 newArray.push("call")
+newArray.insert("lmao", 1)
 print(newArray.data)
