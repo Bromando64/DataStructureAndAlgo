@@ -19,33 +19,33 @@ class Node:
 
 class LinkedList:
     def __init__(self, value):
-        self.newNode = Node(value)
-        self.head = self.newNode
-        self.tail = self.newNode
+        newNode = Node(value)
+        self.head = newNode
+        self.tail = newNode
         self.length = 1
 
     def append(self, value):
-        self.newNode = Node(value)
-        self.tail.next = self.newNode
-        self.tail = self.newNode
+        newNode = Node(value)
+        self.tail.next = newNode
+        self.tail = newNode
         self.length += 1
 
     def prepend(self, value):
-        self.newNode = Node(value)
-        self.newNode.next = self.head
-        self.head = self.newNode
+        newNode = Node(value)
+        newNode.next = self.head
+        self.head = newNode
         self.length += 1
 
     def insert(self, index, value):
-        self.newNode = Node(value)
+        newNode = Node(value)
         mover = self.head
         n = 1
         while n < index:
             mover = mover.next
             n += 1
         self.temp = mover.next
-        mover.next = self.newNode
-        self.newNode.next = self.temp
+        mover.next = newNode
+        newNode.next = self.temp
         self.length += 1
 
     def printer(self):
