@@ -63,6 +63,28 @@ class LinkedList:
             n += 1
         return mover
 
+    # def reverse(self):
+    #     mover = self.head
+    #     n = 0
+    #     while mover:
+    #         self.prepend(mover.value)
+    #         self.delete(n+1)
+    #         mover = mover.next
+    #         n += 1
+
+    def reverse(self):
+        if self.head.next == None:
+            return self.head
+        first = self.head
+        second = first.next
+        while second:
+            temp = second.next
+            second.next = first
+            first = second
+            second = temp
+        self.head.next = None
+        self.head = first
+
     def printer(self):
         temp = self.head
         arr = []
@@ -79,4 +101,6 @@ myLinkedList.append(16)
 myLinkedList.prepend(12)
 myLinkedList.insert(2, 99)
 myLinkedList.delete(3)
+myLinkedList.printer()
+myLinkedList.reverse()
 myLinkedList.printer()
