@@ -18,3 +18,4 @@ myStack.push("Amazon")
 myStack.push("Facebook")
 myStack.push("Discord")
 print(myStack.peek())
+# arrays act like stacks so we can just use it regularly
