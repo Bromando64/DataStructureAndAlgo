@@ -9,7 +9,6 @@ def mergeSort(array):
         middle = len(array)//2
         left = array[:middle]
         right = array[middle:]
-
         # Sort the two halves
         mergeSort(left)
         mergeSort(right)
@@ -38,6 +37,7 @@ def mergeSort(array):
             array[index] = right[rightIndex]
             rightIndex += 1
             index += 1
+            # this is a comment
 
 
 # Print the array
