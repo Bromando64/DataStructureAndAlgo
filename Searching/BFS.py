@@ -1,3 +1,6 @@
+import queue
+
+
 class BinaryTreeNode:
 
     def __init__(self, value):
@@ -126,6 +129,18 @@ class BinarySearchTree:
                 queue.append(currentNode.right)
         print(list)
 
+    def breadthFirstSearchR(self, queue, list):
+        if len(queue) == 0:
+            return list
+        currentNode = queue[0]
+        del queue[0]
+        list.append(currentNode.value)
+        if currentNode.left:
+            queue.append(currentNode.left)
+        if currentNode.right:
+            queue.append(currentNode.right)
+        return self.breadthFirstSearchR(queue, list)
+
 
 binarySearch = BinarySearchTree()
 binarySearch.insert(9)
@@ -140,4 +155,5 @@ binarySearch.insert(1)
 #     4       20
 # 1     6  15    170
 
-binarySearch.breadthFirstSearch()
+# binarySearch.breadthFirstSearch()
+print(binarySearch.breadthFirstSearchR([binarySearch.root], []))
