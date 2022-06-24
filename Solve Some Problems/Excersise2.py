@@ -24,7 +24,7 @@ def findTheSumOfPair(arr):
 # print(findTheSumOfPair(arr))
 
 
-# Better Approach
+# Better Approach for sorted array
 def findTheSumOfPair2(arr):
     low = 0
     hi = len(arr)-1
